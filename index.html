@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Project</title>
+    <link rel="shortcut icon" href="img/dp-logo (2).jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome icon cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- .font awesome icon cdn -->
+
+</head>
+
+<body class="bg-gray-50 text-gray-500 font-normal overflow-x-hidden">
+
+    <!-- header section -->
+    <header class="fixed top-0 left-0 right-0 bg-white p-4 lg:py-0 lg:px-2 shadow lg:h-[8vh]">
+        <div class="container m-auto">
+            <div class="flex items-center justify-between">
+                <div class="logo-para flex items-center lg:space-x-14">
+                    <img class="h-[30px] sm:h-10" src="img/logo-w-codementor.png" alt="image-logo">
+                    <nav class="lg:flex items-center">
+                        <div
+                            class="navbar fixed top-20 left-[-110%] lg:flex items-center lg:space-x-5 text-sm space-y-2 md:space-y-0 lg:relative lg:top-0 lg:left-0 lg:right-0 bg-white p-6 lg:p-0 lg:bg-transparent w-[95%] lg:w-auto lg:m-0 m-auto">
+                            <p class="p-2 lg:h-[8vh] lg:flex justify-center items-center hover:bg-[#f6faff] cursor-pointer font-medium hover:text-blue-900 hover:font-semibold hidden drop-p"
+                                onclick="dropNav()">Find Projects <i class="fas fa-arrow-down ml-2"></i></p>
+                            <p
+                                class="p-2 hover:bg-[#f6faff] cursor-pointer font-medium hover:text-blue-900 hover:font-semibold lg:hidden">
+                                <i class="fas fa-television"></i> Web development</p>
+                            <p
+                                class="p-2 hover:bg-[#f6faff] cursor-pointer font-medium hover:text-blue-900 hover:font-semibold lg:hidden">
+                                <i class="fas fa-mobile"></i> Mobile app</p>
+                            <p
+                                class="p-2 hover:bg-[#f6faff] cursor-pointer font-medium hover:text-blue-900 hover:font-semibold lg:hidden">
+                                <i class="fas fa-computer"></i> Automation or tools</p>
+                            <p
+                                class="p-2 lg:h-[8vh] lg:flex justify-center items-center hover:bg-[#f6faff] cursor-pointer font-medium hover:text-blue-900 hover:font-semibold">
+                                View Solutions</p>
+                            <p
+                                class="p-2 lg:h-[8vh] lg:flex justify-center items-center hover:bg-[#f6faff] cursor-pointer font-medium hover:text-blue-900 hover:font-semibold">
+                                Find Mentors</p>
+                            <p
+                                class="p-2 lg:h-[8vh] lg:flex justify-center items-center hover:bg-[#f6faff] cursor-pointer font-medium hover:text-blue-900 hover:font-semibold">
+                                Contribute Projects</p>
+                            <p
+                                class="p-2 hover:bg-[#f6faff] cursor-pointer font-medium hover:text-blue-900 hover:font-semibold lg:hidden">
+                                Contact us</p>
+                            <div class="w-full h-[0.1vh] bg-gray-400 lg:hidden"></div>
+                            <button
+                                class="px-3 py-2 text-sm text-gray-900 hover:bg-gray-100 tracking-wider uppercase rounded my-4 font-bold lg:hidden">log
+                                in</button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="button md:space-x-3 font-bold">
+                    <button
+                        class="px-3 py-2 text-sm text-gray-900 hover:bg-gray-100 tracking-wider uppercase rounded hidden lg:inline-block">log
+                        in</button>
+                    <button
+                        class="px-3 py-2 text-sm text-gray-100 bg-orange-600 hover:bg-orange-700 tracking-wider uppercase rounded">sign
+                        up</button>
+                    <i class="fas fa-bars mx-3 menu-bars text-lg cursor-pointer lg:hidden" onclick="toggleNav()"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- .header section -->
+
+    <!-- header dropdown -->
+    <section class="header-dropdown bg-white w-fit m-auto hidden fixed top-16 right-0 left-0 rounded">
+        <div class="grid grid-cols-3 gap-5 p-6">
+            <div class="drop">
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="fas fa-code bg-gray-200 py-1 px-2"></i> HTML/CSS projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="bg-gray-200 py-1 px-2 text-xs">JS</i> JavaScript projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="bg-gray-200 py-1 px-2 text-xs">RJ</i> React projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="bg-gray-200 py-1 px-2 text-xs">VUE</i> Vue projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="bg-gray-200 py-1 px-2 text-xs">AJ</i> Angular projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="bg-gray-200 py-1 px-2 text-xs">NJ</i> Node.js projects</p>
+            </div>
+            <div class="drop">
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="fas fa-robot bg-gray-200 py-1 px-2"></i> Phyton projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="bg-gray-200 py-1 px-2 text-xs">ruby</i> Ruby projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="fas fa- bg-gray-200 py-1 px-2 text-xs">java</i> Java projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="bg-gray-200 py-1 px-2 text-xs">PHP</i> PHP projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="fas fa-plane bg-gray-200 py-1 px-2"></i> Swift projects</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="bg-gray-200 py-1 px-2 text-xs">RN</i> React native projects</p>
+            </div>
+            <div class="drop">
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="fas fa-television bg-gray-200 py-1 px-2"></i> Web development</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="fas fa-mobile bg-gray-200 py-1 px-2"></i> Mobile app</p>
+                <p class="p-2 hover:bg-blue-100 cursor-pointer font-medium hover:text-blue-900 hover:font-semibold"><i
+                        class="fas fa-computer bg-gray-200 py-1 px-2"></i> Automation or tools</p>
+            </div>
+        </div>
+    </section>
+    <!-- .header dropdown -->
+
+    <!-- home section -->
+    <section class="home bg-[#f6faff] py-28">
+        <div class="container m-auto p-10">
+            <div class="flex items-center justify-center flex-wrap lg:flex-nowrap space-y-5 lg:space-y-0 lg:space-x-5">
+                <div class="text-content space-y-10">
+                    <div class="head text-3xl lg:text-5xl text-center lg:text-left text-gray-800 font-bold">
+                        <h1>Learn programming by building projects</h1>
+                    </div>
+                    <div class="para text-sm sm:text-lg text-center lg:text-left text-gray-700">
+                        <p>Improve your programming skills by working on real-world projects. Join our free community to
+                            discuss projects, review code, and learn from peers and mentors.</p>
+                    </div>
+                    <div class="button w-fit m-auto lg:w-auto">
+                        <button
+                            class="py-3 p-5 font-bold text-sm md:text-base text-gray-100 bg-orange-600 hover:bg-orange-700 tracking-wider uppercase rounded">START
+                            BUILDING PROJECTS</button>
+                    </div>
+                </div>
+                <div class="img-content">
+                    <img src="img/hero-image.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- .home section -->
+
+    <!-- hello section -->
+    <section class="hello">
+        <div class=" container md:max-w-5xl m-auto p-6">
+            <div class="flex items-center flex-wrap md:flex-nowrap md:space-x-5">
+                <div class="text-wrapper md:w-[50%] text-center md:text-left space-y-2 md:hidden">
+                    <div class="w-fit m-auto md:w-auto">
+                        <img src="img/icon-projects.png" width="50" height="50" alt="image">
+                    </div>
+                    <div class="head text-xl md:text-3xl text-gray-800 font-bold">
+                        <h1>Still writing “Hello World”?
+                            Build <span class="text-blue-500">real-world</span> projects</h1>
+                    </div>
+                    <div class="para text-sm sm:text-base text-gray-600">
+                        <p>Bridge the gap between learning and applying new skills through projects designed by senior
+                            developers. More languages coming soon!</p>
+                    </div>
+                </div>
+                <div class="image-wrapper md:w-[50%]">
+                    <img src="img/image-projects.png" class="object-cover w-[70%] h-[70%] md:w-full md:h-full m-auto"
+                        alt="image">
+                    <div class="flex items-center flex-wrap w-fit m-auto md:hidden">
+                        <img class="m-1" src="img/react.png" alt="image">
+                        <img class="m-1" src="img/phyton.png" alt="image">
+                        <img class="m-1" src="img/ruby.png" alt="image">
+                        <img class="m-1" src="img/node.js.png" alt="image">
+                        <img class="m-1" src="img/swift.png" alt="image">
+                        <img class="m-1" src="img/js.png" alt="image">
+                        <img class="m-1" src="img/java.png" alt="image">
+                    </div>
+                </div>
+                <div class="text-wrapper md:w-[50%] space-y-2 hidden md:block">
+                    <div class="w-fit m-auto md:w-auto">
+                        <img src="img/icon-projects.png" width="50" height="50" alt="image">
+                    </div>
+                    <div class="head text-xl md:text-3xl text-gray-800 font-bold">
+                        <h1>Still writing “Hello World”?
+                            Build <span class="text-blue-500">real-world</span> projects</h1>
+                    </div>
+                    <div class="para text-sm sm:text-base text-gray-600">
+                        <p>Bridge the gap between learning and applying new skills through projects designed by senior
+                            developers. More languages coming soon!</p>
+                    </div>
+                    <div class="flex items-center w-fit m-auto space-x-3">
+                        <img src="img/react.png" alt="image">
+                        <img src="img/phyton.png" alt="image">
+                        <img src="img/ruby.png" alt="image">
+                        <img src="img/node.js.png" alt="image">
+                        <img src="img/swift.png" alt="image">
+                        <img src="img/js.png" alt="image">
+                        <img src="img/java.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- .hello section -->
+
+    <!-- mentor section -->
+    <section class="mentor my-5">
+        <div class="container md:max-w-5xl m-auto p-6">
+            <div class="flex items-center flex-wrap md:flex-nowrap md:space-x-5">
+                <div class="text-wrapper md:w-[50%] space-y-2 text-center md:text-left">
+                    <div class="w-fit m-auto md:w-auto">
+                        <img src="img/icon-discussion.png" width="50" height="50" alt="image">
+                    </div>
+                    <div class="head text-xl md:text-3xl text-gray-800 font-bold">
+                        <h1>Stuck on a project?
+                            Discuss with <span class="text-yellow-400">peers & mentors</span></h1>
+                    </div>
+                    <div class="para text-sm sm:text-base text-gray-600">
+                        <p>Learn and grow together by asking questions and discussing projects, reviewing code, and
+                            giving feedback.</p>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-2">
+                        <div
+                            class="para text-xs text-gray-700 p-2 bg-gray-300 italic rounded-lg rounded-r-none rounded-br-2xl">
+                            <p>“Discussing with other developers helped me view the problem from another perspective!”
+                            </p>
+                        </div>
+                        <img src="img/discussion-alpaca.png" width="50" height="50" alt="image">
+                    </div>
+                </div>
+                <div class="image-wrapper md:w-[50%]">
+                    <img src="img/image-discussion.png" class="object-cover w-[70%] h-[70%] md:w-full md:h-full m-auto"
+                        alt="image">
+                    <div class="flex items-center space-x-2 md:hidden">
+                        <div
+                            class="para text-xs text-gray-700 p-2 bg-gray-300 italic rounded-lg rounded-r-none rounded-br-2xl">
+                            <p>“Discussing with other developers helped me view the problem from another perspective!”
+                            </p>
+                        </div>
+                        <img src="img/discussion-alpaca.png" width="50" height="50" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- .mentor section -->
+
+    <!-- share section -->
+    <section class="share">
+        <div class=" container md:max-w-5xl m-auto p-6">
+            <div class="flex items-center flex-wrap md:flex-nowrap md:space-x-5">
+                <div class="text-wrapper md:w-[50%] space-y-2 text-center md:text-left md:hidden">
+                    <div class="w-fit m-auto md:w-auto">
+                        <img src="img/icon-solutions.png" width="50" height="50" alt="image">
+                    </div>
+                    <div class="head text-xl md:text-3xl text-gray-800 font-bold">
+                        <p>Not sure how to improve?
+                            Share your code & get <span class="text-orange-600">feedback</span></p>
+                    </div>
+                    <div class="para text-sm sm:text-base text-gray-600">
+                        <p>Share your project code with the community to get feedback on your code structure, technical
+                            decisions, tradeoffs you've made, and more.</p>
+                    </div>
+                </div>
+                <div class="image-wrapper md:w-[50%]">
+                    <img src="img/image-solutions.png" class="object-cover w-[70%] h-[70%] md:w-full md:h-full m-auto"
+                        alt="image">
+                </div>
+                <div class="text-wrapper md:w-[50%] space-y-2 text-center md:text-left hidden md:block">
+                    <div class="w-fit m-auto md:w-auto">
+                        <img src="img/icon-solutions.png" width="50" height="50" alt="image">
+                    </div>
+                    <div class="head text-xl md:text-3xl text-gray-800 font-bold">
+                        <p>Not sure how to improve?
+                            Share your code & get <span class="text-orange-600">feedback</span></p>
+                    </div>
+                    <div class="para text-sm sm:text-base text-gray-600">
+                        <p>Share your project code with the community to get feedback on your code structure, technical
+                            decisions, tradeoffs you've made, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- .share section -->
+
+    <!-- web section -->
+    <section class="web my-10">
+        <div class="container m-auto">
+            <div class="head text-xl md:text-3xl text-gray-800 font-bold text-center">
+                <h1>Find your next project</h1>
+            </div>
+            <div class="bg-blue-50 my-14 p-6 rounded-md shadow-lg">
+                <div class="flex items-center justify-center space-x-4">
+                    <img src="img/web-dev-large.png" width="50" height="50" alt="image">
+                    <div class="head text-lg md:text-2xl text-blue-500 font-bold tracking-wider text-center">
+                        <h1>Web development projects</h1>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 my-14">
+                    <div
+                        class="space-y-4 bg-gray-50 rounded-xl p-6 border-2 border-gray-700 shadow hover:shadow-md hover:shadow-gray-900 cursor-pointer">
+                        <div class="bg-green-200 text-green-900 py-1 px-4 rounded-full w-fit text-xs">
+                            <p>Easy</p>
+                        </div>
+                        <div class="head text-base md:text-xl text-gray-800 font-bold hover:underline">
+                            <h1>Build a custom google maps theme</h1>
+                        </div>
+                        <div class="para text-sm md:text-base text-gray-600">
+                            <p>In this project, you’ll be creating and styling a Google Map with a theme and custom
+                                marker images. You’ll use Google Cloud...</p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>HTML/CSS</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12">
+                            <div class="text-xs text-gray-600">
+                                <p> <span class="fas fa-users"></span> <span class="text-gray-800 font-bold">2081</span>
+                                    developers</p>
+                            </div>
+                            <div class="text-xs md:text-base text-orange-500 hover:text-orange-600">
+                                <p>View project&nbsp;<span class="fas fa-arrow-right"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="space-y-4 bg-gray-50 rounded-xl p-6 border-2 border-gray-700 shadow hover:shadow-md hover:shadow-gray-900 cursor-pointer">
+                        <div class="bg-blue-200 text-blue-900 py-1 px-4 rounded-full w-fit text-xs">
+                            <p>Medium</p>
+                        </div>
+                        <div class="head text-base md:text-xl text-gray-800 font-bold hover:underline">
+                            <h1>Image search gallery</h1>
+                        </div>
+                        <div class="para text-sm md:text-base text-gray-600">
+                            <p>You’ll create a simple image search application that allows the user to search for images
+                                using Unsplash’s image API.
+                            </p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>React</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>HTML/CSS</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Angular</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Vue.js</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12">
+                            <div class="text-xs text-gray-600">
+                                <p> <span class="fas fa-users"></span> <span class="text-gray-800 font-bold">435</span>
+                                    developers</p>
+                            </div>
+                            <div class="text-xs md:text-base text-orange-500 hover:text-orange-600">
+                                <p>View project&nbsp;<span class="fas fa-arrow-right"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="space-y-4 bg-gray-50 rounded-xl p-6 border-2 border-gray-700 shadow hover:shadow-md hover:shadow-gray-900 cursor-pointer">
+                        <div class="bg-red-200 text-red-900 py-1 px-4 rounded-full w-fit text-xs">
+                            <p>Hard</p>
+                        </div>
+                        <div class="head text-base md:text-xl text-gray-800 font-bold hover:underline">
+                            <h1>Downtime monitoring with reporting and alerts</h1>
+                        </div>
+                        <div class="para text-sm md:text-base text-gray-600">
+                            <p>You’ll build an automated downtime monitoring application with alerts and uptime reports.
+                                You can use this app to...</p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>MonoDB</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>PHP</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Node.js</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Vue.js</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Express (express.js)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12">
+                            <div class="text-xs text-gray-600">
+                                <p> <span class="fas fa-users"></span> <span class="text-gray-800 font-bold">361</span>
+                                    developers</p>
+                            </div>
+                            <div class="text-xs md:text-base text-orange-500 hover:text-orange-600">
+                                <p>View project&nbsp;<span class="fas fa-arrow-right"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button w-fit m-auto">
+                    <button
+                        class="py-3 px-14 font-bold text-sm md:text-base text-gray-100 bg-orange-600 hover:bg-orange-700 tracking-wider uppercase rounded">view
+                        all</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- .web section -->
+
+    <!-- Mobile section -->
+    <section class="Mobile my-10">
+        <div class="container m-auto">
+            <div class="bg-orange-50 my-14 p-6 rounded-md shadow-lg">
+                <div class="flex items-center justify-center space-x-4">
+                    <img src="img/mobile-app-large.png" width="50" height="50" alt="image">
+                    <div class="head text-lg md:text-2xl text-orange-700 font-bold tracking-wider text-center">
+                        <h1>Mobile app projects</h1>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 my-14">
+                    <div
+                        class="space-y-4 bg-gray-50 rounded-xl p-6 border-2 border-gray-700 shadow hover:shadow-md hover:shadow-gray-900 cursor-pointer">
+                        <div class="bg-green-200 text-green-900 py-1 px-4 rounded-full w-fit text-xs">
+                            <p>Easy</p>
+                        </div>
+                        <div class="head text-base md:text-xl text-gray-800 font-bold hover:underline">
+                            <h1>Temperature converter mobile app</h1>
+                        </div>
+                        <div class="para text-sm md:text-base text-gray-600">
+                            <p>You'll create a simple app to convert temperatures from Celsius to Fahrenheit, and
+                                vice-versa. This project should be...</p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Swift</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Java</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>React Native</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12">
+                            <div class="text-xs text-gray-600">
+                                <p> <span class="fas fa-users"></span> <span class="text-gray-800 font-bold">303</span>
+                                    developers</p>
+                            </div>
+                            <div class="text-xs md:text-base text-orange-500 hover:text-orange-600">
+                                <p>View project&nbsp;<span class="fas fa-arrow-right"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="space-y-4 bg-gray-50 rounded-xl p-6 border-2 border-gray-700 shadow hover:shadow-md hover:shadow-gray-900 cursor-pointer">
+                        <div class="bg-blue-200 text-blue-900 py-1 px-4 rounded-full w-fit text-xs">
+                            <p>Medium</p>
+                        </div>
+                        <div class="head text-base md:text-xl text-gray-800 font-bold hover:underline">
+                            <h1>Food journal mobile app</h1>
+                        </div>
+                        <div class="para text-sm md:text-base text-gray-600">
+                            <p>You’ll create a mobile app, using your preferred technology for mobile development, to
+                                capture photos and...</p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Swift</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Java</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>React native</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12">
+                            <div class="text-xs text-gray-600">
+                                <p> <span class="fas fa-users"></span> <span class="text-gray-800 font-bold">198</span>
+                                    developers</p>
+                            </div>
+                            <div class="text-xs md:text-base text-orange-500 hover:text-orange-600">
+                                <p>View project&nbsp;<span class="fas fa-arrow-right"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="space-y-4 bg-gray-50 rounded-xl p-6 border-2 border-gray-700 shadow hover:shadow-md hover:shadow-gray-900 cursor-pointer">
+                        <div class="bg-red-200 text-red-900 py-1 px-4 rounded-full w-fit text-xs">
+                            <p>Hard</p>
+                        </div>
+                        <div class="head text-base md:text-xl text-gray-800 font-bold hover:underline">
+                            <h1>Invoicing and payment reminder mobile app</h1>
+                        </div>
+                        <div class="para text-sm md:text-base text-gray-600">
+                            <p>This app can generate, send, and receive invoices, as well as send automated follow-up
+                                reminders about overdue payments.</p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>MonoDB</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Node.js</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>React</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Express (express.js)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12">
+                            <div class="text-xs text-gray-600">
+                                <p> <span class="fas fa-users"></span> <span class="text-gray-800 font-bold">558</span>
+                                    developers</p>
+                            </div>
+                            <div class="text-xs md:text-base text-orange-500 hover:text-orange-600">
+                                <p>View project&nbsp;<span class="fas fa-arrow-right"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button w-fit m-auto">
+                    <button
+                        class="py-3 px-14 font-bold text-sm md:text-base text-gray-100 bg-orange-600 hover:bg-orange-700 tracking-wider uppercase rounded">view
+                        all</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- .Mobile section -->
+
+    <!-- Automation section -->
+    <section class="Automation my-10">
+        <div class="container m-auto">
+            <div class="bg-pink-50 my-14 p-6 rounded-md shadow-lg">
+                <div class="flex items-center justify-center space-x-4">
+                    <img src="img/automation-tools-large.png" width="50" height="50" alt="image">
+                    <div class="head text-lg md:text-2xl text-pink-700 font-bold tracking-wider text-center">
+                        <h1>Automation or tools projects</h1>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 my-14">
+                    <div
+                        class="space-y-4 bg-gray-50 rounded-xl p-6 border-2 border-gray-700 shadow hover:shadow-md hover:shadow-gray-900 cursor-pointer">
+                        <div class="bg-green-200 text-green-900 py-1 px-4 rounded-full w-fit text-xs">
+                            <p>Easy</p>
+                        </div>
+                        <div class="head text-base md:text-xl text-gray-800 font-bold hover:underline">
+                            <h1>Slack bot: PageSpeed Insights report</h1>
+                        </div>
+                        <div class="para text-sm md:text-base text-gray-600">
+                            <p>Let's build a Slack bot that can easily keep track of your deployed websites' page speed
+                                performance within your Slack...</p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Node.js</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12">
+                            <div class="text-xs text-gray-600">
+                                <p> <span class="fas fa-users"></span> <span class="text-gray-800 font-bold">264</span>
+                                    developers</p>
+                            </div>
+                            <div class="text-xs md:text-base text-orange-500 hover:text-orange-600">
+                                <p>View project&nbsp;<span class="fas fa-arrow-right"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="space-y-4 bg-gray-50 rounded-xl p-6 border-2 border-gray-700 shadow hover:shadow-md hover:shadow-gray-900 cursor-pointer">
+                        <div class="bg-green-200 text-green-900 py-1 px-4 rounded-full w-fit text-xs">
+                            <p>Easy</p>
+                        </div>
+                        <div class="head text-base md:text-xl text-gray-800 font-bold hover:underline">
+                            <h1>Web scraper to get news article content</h1>
+                        </div>
+                        <div class="para text-sm md:text-base text-gray-600">
+                            <p>We'll build a simple web scraper that returns the content of a news article when given a
+                                specific URL. Some examples of...</p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Phyton</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12">
+                            <div class="text-xs text-gray-600">
+                                <p> <span class="fas fa-users"></span> <span class="text-gray-800 font-bold">831</span>
+                                    developers</p>
+                            </div>
+                            <div class="text-xs md:text-base text-orange-500 hover:text-orange-600">
+                                <p>View project&nbsp;<span class="fas fa-arrow-right"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="space-y-4 bg-gray-50 rounded-xl p-6 border-2 border-gray-700 shadow hover:shadow-md hover:shadow-gray-900 cursor-pointer">
+                        <div class="bg-blue-200 text-blue-900 py-1 px-4 rounded-full w-fit text-xs">
+                            <p>Medium</p>
+                        </div>
+                        <div class="head text-base md:text-xl text-gray-800 font-bold hover:underline">
+                            <h1>Background job system</h1>
+                        </div>
+                        <div class="para text-sm md:text-base text-gray-600">
+                            <p>The background job system is a common component in the modern workflow. It can run jobs
+                                in an async fashion, which reduces...</p>
+                        </div>
+                        <div class="flex items-center flex-wrap">
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Node.js</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>PHP</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Java</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Phyton</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Ruby</p>
+                            </div>
+                            <div class="py-1 px-3 m-1 bg-gray-200 text-xs text-gray-900 rounded tracking-wider">
+                                <p>Go (Golang)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-12">
+                            <div class="text-xs text-gray-600">
+                                <p> <span class="fas fa-users"></span> <span class="text-gray-800 font-bold">374</span>
+                                    developers</p>
+                            </div>
+                            <div class="text-xs md:text-base text-orange-500 hover:text-orange-600">
+                                <p>View project&nbsp;<span class="fas fa-arrow-right"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button w-fit m-auto">
+                    <button
+                        class="py-3 px-14 font-bold text-sm md:text-base text-gray-100 bg-orange-600 hover:bg-orange-700 tracking-wider uppercase rounded">view
+                        all</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- .Automation section -->
+
+    <!-- browse section -->
+    <section class="browse my-10">
+        <div class="container md:max-w-5xl m-auto p-6">
+            <div class="head text-xl md:text-3xl text-gray-800 font-bold text-center">
+                <h1>Browse more projects</h1>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 font-medium my-10">
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/web-dev-large.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Web development projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/mobile-app-large.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Mobile app projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/automation-tools-large.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Automation or tools projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/icon-solutions.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>HTML/CSS projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/js.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>JavaScript projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/react.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>React projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/icon-discussion.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Vue projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/icon-projects.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Angular projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/node.js.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Node.js projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/phyton.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Python projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/ruby.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Ruby projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/java.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Java projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/icon-solutions.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>PHP projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/swift.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>Swift projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div
+                        class="flex items-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-900 hover:text-blue-100 rounded-xl py-2 px-3 cursor-pointer">
+                        <div>
+                            <img src="img/react.png" width="30" height="30" alt="">
+                        </div>
+                        <div class="text-sm md:text-base">
+                            <p>React native projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="para text-sm sm:text-base italic text-gray-700 text-center">
+                <p>More coming soon...</p>
+            </div>
+        </div>
+    </section>
+    <!-- .browse section -->
+
+    <!-- built section -->
+    <section class="built">
+        <div class=" w-fit m-auto relative">
+            <img src="img/coming-soon-alpaca.png" width="200" height="200" alt="image">
+        </div>
+        <div class="container m-auto p-6 sm:px-12 bg-gray-100 rounded-2xl">
+            <div class="flex items-center">
+                <div
+                    class="text-wrapper bg-white p-6 lg:py-12 rounded-2xl space-y-4 lg:w-[65%] text-center lg:text-left">
+                    <div
+                        class="head text-xl sm:text-2xl font-bold text-gray-800 flex items-center justify-center lg:justify-start">
+                        <h1>Built with ❤️ by </h1>
+                        <span><img src="img/cm-logo.png" class="mx-3" width="230" height="230" alt="image"></span>
+                    </div>
+                    <div class="para text-base sm:text-lg text-gray-600 text-center lg:text-left">
+                        <p>A community of 12,000+ developers who help each other grow through one-on-one mentorship in
+                            technologies such as Python, JavaScript, Java, React, SQL, and more.</p>
+                    </div>
+                    <div class="flex items-center flex-wrap w-fit m-auto lg:m-0">
+                        <img class="m-1" width="30" height="30" src="img/react.png" alt="image">
+                        <img class="m-1" width="30" height="30" src="img/phyton.png" alt="image">
+                        <img class="m-1" width="30" height="30" src="img/ruby.png" alt="image">
+                        <img class="m-1" width="30" height="30" src="img/node.js.png" alt="image">
+                        <img class="m-1" width="30" height="30" src="img/swift.png" alt="image">
+                        <img class="m-1" width="30" height="30" src="img/js.png" alt="image">
+                        <img class="m-1" width="30" height="30" src="img/java.png" alt="image">
+                    </div>
+                    <div class="button">
+                        <button
+                            class="py-3 px-4 font-bold text-xs md:text-sm text-blue-100 bg-blue-500 hover:bg-blue-400 tracking-wider uppercase rounded w-full lg:w-fit">FIND
+                            1:1 MENTORSHIP</button>
+                    </div>
+                </div>
+                <div class="image-wrapper lg:w-[55%] xl:w-[40%] lg:-ml-32 hidden lg:block">
+                    <img src="img/mentors.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- .built section -->
+
+    <!-- footer section -->
+    <footer class="bg-gray-200 mt-10">
+        <div class="container m-auto p-6">
+            <div class="md:flex md:justify-between md:flex-wrap space-y-10 w-fit m-auto md:w-auto md:m-0 md:space-y-0">
+                <div class="project-mentor space-y-10 md:w-full md:mb-10 lg:w-fit lg:mb-0 mx-1">
+                    <div class="space-y-3 cursor-pointer">
+                        <img class="h-[30px]" src="img/dp-logo.png" alt="image-logo">
+                        <div class="para text-sm text-gray-700 hover:underline">
+                            <p>Learn programming by building projects</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 cursor-pointer">
+                        <img class="h-[20px]" src="img/cm-logo.png" alt="image-logo">
+                        <div class="para text-sm text-gray-700 hover:underline">
+                            <p>Find a mentor to help you in real time</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="para space-y-2 mx-1">
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Web development Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Mobile app Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Automation or tools Projects</p>
+                </div>
+                <div class="para space-y-2 mx-1">
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">HTML/CSS Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">JavaScript Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">React Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Vue Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Angular Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Node.js Projects</p>
+                </div>
+                <div class="para space-y-2 mx-1">
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Python Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Ruby Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Java Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">PHP Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Swift Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">React native Projects</p>
+                </div>
+                <div class="para space-y-2 mx-1">
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">View Project Solutions</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Find Mentors</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Contribute Projects</p>
+                    <p class="text-sm text-gray-700 hover:underline cursor-pointer">Contact Us</p>
+                    <div class="">
+                        <img width="150" height="150" src="img/footer-alpaca.png" alt="image">
+                    </div>
+                </div>
+                <div class="h-[0.1vh] w-full bg-gray-700"></div>
+            </div>
+            <div
+                class="flex items-center flex-wrap sm:flex-nowrap justify-center lg:justify-start py-3 lg:py-5 text-gray-700">
+                <div class="cursor-pointer m-1">
+                    <p class="hover:underline text-base">Privacy Policy</p>
+                </div>
+                <div class="cursor-pointer m-1">
+                    <p class="hover:underline text-base">Terms of Service</p>
+                </div>
+                <div class="flex items-center space-x-3 m-1">
+                    <i class="fab fa-facebook text-base cursor-pointer hover:text-gray-900 text-gray-700"></i>
+                    <i class="fab fa-twitter text-base cursor-pointer hover:text-gray-900 text-gray-700"></i>
+                    <i class="fab fa-linkedin text-base cursor-pointer hover:text-gray-900 text-gray-700"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- .footer section -->
+
+    <script>
+
+        // toggle navbar section
+        let toggleNavStatus = true;
+        let toggleNav = function () {
+            let getNavBar = document.querySelector(".navbar");
+            let getMenuBar = document.querySelector(".menu-bars");
+
+            if (toggleNavStatus) {
+                getNavBar.style.left = "2%";
+            } else{
+                getNavBar.style.left = "-110%";
+            }
+            toggleNavStatus = !toggleNavStatus;
+        }
+        // toggle navbar section
+
+        // dropdown navbar section
+        let dropNavStatus = false;
+        let dropNav = function () {
+            let getDrop = document.querySelector(".drop-p");
+            let getDropContent = document.querySelector(".header-dropdown");
+
+            if (dropNavStatus == false) {
+                getDropContent.style.display = "block";
+                dropNavStatus = true
+            } else if (dropNavStatus == true) {
+                getDropContent.style.display = "none";
+                dropNavStatus = false
+            }
+        }
+        // dropdown navbar section
+
+    </script>
+
+    <script src="tailwind.config.js"></script>
+</body>
+
+</html>
